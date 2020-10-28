@@ -20,7 +20,7 @@ public interface Queue<T> {
      * @param element element to insert.
      * @throws FullQueueException if there is no capacity / memory for more elements.
      */
-    public void enqueue(T element) throws FullQueueException;
+    void enqueue(T element) throws FullQueueException;
 
     /**
      * Removes the element at the start of the queue.
@@ -28,7 +28,7 @@ public interface Queue<T> {
      * @return the element at the start of the queue.
      * @throws EmptyQueueException if the queue is empty.
      */
-    public T dequeue() throws EmptyQueueException;
+    T dequeue() throws EmptyQueueException;
 
     /**
      * Returns the element at the start of the queue without removing it from the queue
@@ -36,26 +36,25 @@ public interface Queue<T> {
      * @return the element at the start of the queue.
      * @throws EmptyQueueException if the queue is empty.
      */
-    public T front() throws EmptyQueueException;
+    T front() throws EmptyQueueException;
 
     /**
      * Returns the number of elements currently in the queue.
      *
      * @return Number of elements in the queue.
      */
-    public int size();
+    int size();
 
     /**
      * Checks if the queue does not have any elements in it.
      *
-     * @return true if queue is empty.
-     * @return false if queue is not empty.
+     * @return true if queue is empty, false if queue has ant elements.
      */
-    public boolean isEmpty();
+    boolean isEmpty();
 
     /**
      * Removes all elements from queue.
      */
-    public void clear();
+    void clear();
 
 }

@@ -1,6 +1,10 @@
-package pt.pa.adts;
+package test;
 
-import sun.invoke.empty.Empty;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import pt.pa.adts.EmptyQueueException;
+import pt.pa.adts.Queue;
+import pt.pa.adts.QueueLinkedList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -8,12 +12,12 @@ class QueueLinkedListTest {
 
     private Queue<Integer> queue;
 
-    @org.junit.jupiter.api.BeforeEach
+    @BeforeEach
     void setUp() {
         queue = new QueueLinkedList<>();
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void enqueue() {
         queue.enqueue(1);
         assertEquals(1, queue.front());
@@ -27,7 +31,7 @@ class QueueLinkedListTest {
         assertEquals(3, queue.size());
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void dequeue() {
         queue.enqueue(1);
         assertEquals(1, queue.dequeue());
@@ -39,7 +43,7 @@ class QueueLinkedListTest {
         assertThrows(EmptyQueueException.class, () -> queue.dequeue());
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void front() {
         queue.enqueue(1);
         assertEquals(1, queue.front());
