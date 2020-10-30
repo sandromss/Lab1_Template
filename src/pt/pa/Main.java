@@ -47,16 +47,14 @@ public class Main {
         PrintJob job6 = new PrintJob("Job6", Priority.HIGH, 2);
         PrintJob job7 = new PrintJob("Job7", Priority.NORMAL, 1);
 
-        priorityQueue.enqueue(job1);
-        priorityQueue.enqueue(job5);
-        priorityQueue.enqueue(job2);
-        priorityQueue.enqueue(job3);
-        priorityQueue.enqueue(job6);
-        priorityQueue.enqueue(job4);
-        priorityQueue.enqueue(job7);
-
         try {
-
+            priorityQueue.enqueue(job1);
+            priorityQueue.enqueue(job5);
+            priorityQueue.enqueue(job2);
+            priorityQueue.enqueue(job3);
+            priorityQueue.enqueue(job6);
+            priorityQueue.enqueue(job4);
+            priorityQueue.enqueue(job7);
         } catch(Exception e) {
             System.out.println(e.getMessage());
         }

@@ -23,7 +23,7 @@ public class PriorityQueue<T extends Comparable<T>> implements Queue<T> {
     }
 
     /**
-     * Inserts the element at the end of the queue.
+     * Inserts the element in the queue according to the priority.
      *
      * @param element element to insert.
      * @throws FullQueueException if there is no capacity / memory for more elements.
